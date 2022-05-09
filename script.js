@@ -2,12 +2,20 @@ let canvas = document.getElementById('canvas');
 let cells = document.getElementsByClassName('canvasCell');
 
 function buildCanvas(dimensions) {
-  let cellCount = dimensions * dimensions;
-  console.log(cellCount);
-  for (i = 0; i < cellCount; i++) {
-    let newCell = document.createElement('div');
-    canvas.appendChild(newCell).className = 'cell';
+  for (let i = 0; i < dimensions; i++) {
+    console.log('buildCanvas', i, dimensions);
+    canvas.appendChild(buildRow(dimensions));
   }
 }
 
-buildCanvas(16);
+buildCanvas(18);
+
+function buildRow(columns) {
+  let row = document.createElement('div');
+  for (let i = 0; i < columns; i++) {
+    console.log('buildRows', i, columns);
+    let newCell = document.createElement('div');
+    row.appendChild(newCell);
+  }
+  return row;
+}

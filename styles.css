@@ -1,8 +1,23 @@
-.canvas {
-  display: grid;
+#canvasWrapper {
+  width: 500px;
+  height: 500px;
 }
-.cell {
-  height: 2em;
-  width: 2em;
+#canvas {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+
   border: solid black 1px;
+  border-width: 1px 0 0 1px;
+}
+#canvas > div {
+  display: flex;
+  flex: 1 1 auto;
+}
+#canvas > div > div {
+  flex: 1 1 auto;
+  border: solid black 1px;
+  border-width: 0 1px 1px 0;
+  padding: 0;
 }
