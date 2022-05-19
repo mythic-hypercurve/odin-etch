@@ -24,3 +24,10 @@
 #canvas > div > div:hover {
   background-color: black;
 }
+
+.mark {
+  background-color: black;
+}
+.noMark {
+  background-color: none;
+}
